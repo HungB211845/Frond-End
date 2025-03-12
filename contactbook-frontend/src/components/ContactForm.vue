@@ -67,8 +67,8 @@ export default {
       phone: yup
         .string()
         .matches(
-          /((09|03|07|08|05)+([0-9]{8})\b)/g,
-          "Số điện thoại không hợp lệ."
+          /^([0-9]{10,11}$)/,
+          "Số điện thoại phải có 10-11 chữ số."
         ),
     });
     return {
